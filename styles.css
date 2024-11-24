@@ -45,7 +45,8 @@ body {
   top: -25px;
 }
 .WeatherEmoticon {
-  font-size: 40px;
+  width: 90px;
+  height:90px;
 }
 form {
   size: 20px;
