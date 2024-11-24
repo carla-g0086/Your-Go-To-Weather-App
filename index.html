@@ -28,20 +28,21 @@
         <main>
             <div class="currentWeather">
                 <div class="City&Details">
-                    <h2 class="city"></h2>
+                    <h2 id="city"></h2>
 
                     <h3>
-                        Saturday 19:20, <span class="weatherWords">moderate rain</span>
+                        <span class="dateTime"></span> 
                     </h3>
                     <p>
-                        Humidity: <strong>88%</strong>, Wind <strong>7.2 km/h</strong>
+                        <div id="description"></div>
+                    Humidity: <span id="humidity"><strong></strong></span>, Wind: <span id="wind"><strong></strong></span>  
                     </p>
                 </div>
                 <div class="currentTemp">
                     <span class="WeatherEmoticon">
                         <marquee>🌧️</marquee>
                     </span>
-                    <span class="temp"></span>
+                    <span id="temp"></span>
                     <span class="celcius">&degC</span>
                 </div>
             </div>

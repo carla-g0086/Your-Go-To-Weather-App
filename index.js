@@ -1,12 +1,22 @@
 function displayTemp(response) {
-  let temperatureElement = document.querySelector(".temp");
-  let temperature = Math.round(response.data.temperature.current);
-  temperatureElement.innerHTML = temperature;
-  let cityElement = document.querySelector("#search-input-data");
-  cityElement.innerHTML=response.data.city;
+
+let temperatureElement = document.querySelector("#temp");
+let temperature = response.data.temperature.current;
+let cityElement = document.querySelector("#city");
+let humidityElement = document.querySelector("#humidity");
+let windElement = document.querySelector("#wind");
+let descriptionElement = document.querySelector("#description");
+
+console.log(response.data);
+
+cityElement.innerHTML =`${response.data.city}`;
+temperatureElement.innerHTML = Math.round(temperature);
+humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+windElement.innerHTML=`${response.data.wind.speed}km/h`;
+descriptionElement.innerHTML =`${response.data.condition.description}`;
 
 }
-
+  
 function search(event) {
   if (event) {
     event.preventDefault();
@@ -72,4 +82,4 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h3.innerHTML = `${day}, ${month} ${date}, ${year} 🔹 ${hours}:${minutes}  moderate rain`;
+h3.innerHTML = `${day}, ${month} ${date}, ${year} 🔹 ${hours}:${minutes}`;
