@@ -51,10 +51,19 @@ form {
   size: 20px;
 }
 #humidity {
-  color: red;
+  color:firebrick;
 }
 #wind {
-  color: red;
+  color:firebrick;
+  
+}
+#feelsLike {
+  color:firebrick;
+  position: relative;
+}
+.feelsLike {
+  position: relative;
+  top: -20px;
 }
 footer {
   text-align: center;
@@ -84,7 +93,7 @@ h3 {
   font-weight: lighter;
   font-style: italic;
   position: relative;
-  bottom: -22px;
+  bottom: -20px;
 }
 
 #description{
@@ -95,4 +104,5 @@ h3 {
   font-size: large;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: darkblue;
 }
