@@ -32,11 +32,27 @@ function formatDate(date){
     "Saturday",
     ];
     let day=days[date.getDay()];
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+let month = months[date.getMonth()];
+let dateNow = date.getDate();
     
     if (minutes<10){
         minutes=`0${minutes}`;
     }
-return `${day}, ${hours}:${minutes}`;
+return `${day}, ${month} ${dateNow} 🔹 ${hours}:${minutes}`;
     
 }
   
