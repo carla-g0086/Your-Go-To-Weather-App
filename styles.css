@@ -67,6 +67,7 @@ form {
 }
 footer {
   text-align: center;
+  font-size: smaller;
 }
 #search-button {
   border: 1px solid color(#a44101 #ff0100 #6fa705 #cd1e35);
