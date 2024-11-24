@@ -1,5 +1,4 @@
 function displayTemp(response) {
-
 let temperatureElement = document.querySelector("#temp");
 let temperature = response.data.temperature.current;
 let cityElement = document.querySelector("#city");
@@ -7,15 +6,16 @@ let humidityElement = document.querySelector("#humidity");
 let windElement = document.querySelector("#wind");
 let descriptionElement = document.querySelector("#description");
 let feelsLikeElement = document.querySelector("#feelsLike");
-console.log(response.data);
 
-cityElement.innerHTML =`${response.data.city}`;
+cityElement.innerHTML = response.data.city;
 temperatureElement.innerHTML = Math.round(temperature);
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-windElement.innerHTML=`${response.data.wind.speed}km/h`;
-descriptionElement.innerHTML =`${response.data.condition.description}`;
-feelsLikeElement.innerHTML=`${response.data.temperature.feels_like}&degC`
+windElement.innerHTML = `${response.data.wind.speed}km/h`;
+descriptionElement.innerHTML = response.data.condition.description;
+feelsLikeElement.innerHTML = `${response.data.temperature.feels_like}&degC`;
 }
+
+
   
 function search(event) {
   if (event) {
