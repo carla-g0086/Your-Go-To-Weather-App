@@ -11,7 +11,6 @@ let date=new Date(response.data.time*1000)
 let weatherIcon = document.querySelector(".weatherIcon");
 weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}"class="WeatherEmoticon" >`;
 
-console.log(response.data);
 
 
 cityElement.innerHTML = response.data.city;
