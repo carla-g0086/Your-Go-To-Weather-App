@@ -2,12 +2,19 @@ function displayTemp(response) {
   let temperatureElement = document.querySelector(".temp");
   let temperature = Math.round(response.data.temperature.current);
   temperatureElement.innerHTML = temperature;
+  let cityElement = document.querySelector("#search-input-data");
+  cityElement.innerHTML=response.data.city;
+
 }
 
 function search(event) {
-  event.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
 
-  let cityInput = document.querySelector("#search-input-data").value.trim();
+  let cityInput = event
+    ? document.querySelector("#search-input-data").value.trim()
+    : "Vienna";
   let h2 = document.querySelector("h2");
 
   if (cityInput) {
@@ -16,13 +23,19 @@ function search(event) {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityInput}&key=${apiKey}`;
     axios.get(apiUrl).then(displayTemp);
   } else {
+
     h2.innerHTML = "";
     alert("Please enter a city.");
+    
   }
+
 }
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+search();
 
 let now = new Date();
 let h3 = document.querySelector("h3");
