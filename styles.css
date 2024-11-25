@@ -34,6 +34,7 @@ body {
 }
 .currentTemp {
   text-align: right;
+  position: fixed;
 }
 #temp {
   font-size: 65px;
