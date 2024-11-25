@@ -35,19 +35,21 @@ body {
 .currentTemp {
   text-align: right;
   position: fixed;
+  margin: left 45px;
 }
 #temp {
   font-size: 65px;
   text-align: left;
 }
 .celcius {
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
-  top: -25px;
+  top: -33px;
 }
 .WeatherEmoticon {
   width: 90px;
   height:90px;
+  position: relative;
 }
 form {
   size: 20px;
