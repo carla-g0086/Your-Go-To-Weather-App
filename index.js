@@ -24,8 +24,8 @@ timeElement.innerHTML=formatDate(date);
 
 function formatDate(date){
    
-    let minutes=date.getMinutes();
-    let hours=date.getHours();
+    let minutes = String(date.getMinutes()).padStart(2,"0"); 
+    let hours = String(date.getHours()).padStart(2, "0"); 
     let days= [
     "Sunday",
     "Monday",
@@ -53,9 +53,6 @@ function formatDate(date){
 let month = months[date.getMonth()];
 let dateNow = date.getDate();
     
-    if (minutes<10){
-        minutes=`0${minutes}`;
-    }
 return `${day}, ${month} ${dateNow} 🔹 ${hours}:${minutes}`;
     
 }
